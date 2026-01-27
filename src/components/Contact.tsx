@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Send, Linkedin, Mail } from "lucide-react";
+import { Send, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -16,8 +16,8 @@ const Contact = () => {
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+        title: "¡Mensaje enviado!",
+        description: "Gracias por contactarme. Te responderé pronto.",
       });
       (e.target as HTMLFormElement).reset();
     }, 1500);
@@ -34,20 +34,39 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="text-accent font-medium text-sm tracking-widest uppercase mb-4 block">
-              Contact
+              Contacto
             </span>
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Let's <span className="text-accent">connect</span>
+              Hablemos
             </h2>
             
             <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-lg">
-              If talent and transformation matter to your business, let's talk. 
-              I'm always open to exploring how I can help organizations build better teams and evolve faster.
+              Si el talento y la transformación importan para tu negocio, conversemos. 
+              Estoy siempre abierta a explorar cómo puedo ayudar a las organizaciones 
+              a construir mejores equipos y evolucionar más rápido.
             </p>
+
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center gap-3 text-foreground/80">
+                <MapPin className="w-5 h-5 text-accent" />
+                <span>Barcelona, 08015, España</span>
+              </div>
+              <div className="flex items-center gap-3 text-foreground/80">
+                <Phone className="w-5 h-5 text-accent" />
+                <span>+34 692 124 361</span>
+              </div>
+              <a 
+                href="mailto:adrianathalie.92@gmail.com"
+                className="flex items-center gap-3 text-foreground/80 hover:text-accent transition-colors"
+              >
+                <Mail className="w-5 h-5 text-accent" />
+                <span>adrianathalie.92@gmail.com</span>
+              </a>
+            </div>
 
             <div className="flex items-center gap-4">
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/adrianachavez"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center hover:bg-accent transition-colors group"
@@ -55,7 +74,7 @@ const Contact = () => {
                 <Linkedin className="w-5 h-5 text-primary-foreground group-hover:text-accent-foreground" />
               </a>
               <a
-                href="mailto:hello@marcostalent.com"
+                href="mailto:adrianathalie.92@gmail.com"
                 className="w-12 h-12 bg-section-alt rounded-xl flex items-center justify-center hover:bg-accent/20 transition-colors border border-border"
               >
                 <Mail className="w-5 h-5 text-foreground" />
@@ -74,7 +93,7 @@ const Contact = () => {
             <div className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                  Name
+                  Nombre
                 </label>
                 <input
                   type="text"
@@ -82,20 +101,20 @@ const Contact = () => {
                   name="name"
                   required
                   className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all text-foreground"
-                  placeholder="Your name"
+                  placeholder="Tu nombre"
                 />
               </div>
 
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
-                  Company
+                  Empresa
                 </label>
                 <input
                   type="text"
                   id="company"
                   name="company"
                   className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all text-foreground"
-                  placeholder="Your company (optional)"
+                  placeholder="Tu empresa (opcional)"
                 />
               </div>
 
@@ -109,13 +128,13 @@ const Contact = () => {
                   name="email"
                   required
                   className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all text-foreground"
-                  placeholder="your@email.com"
+                  placeholder="tu@email.com"
                 />
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                  Message
+                  Mensaje
                 </label>
                 <textarea
                   id="message"
@@ -123,7 +142,7 @@ const Contact = () => {
                   required
                   rows={4}
                   className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all resize-none text-foreground"
-                  placeholder="Tell me about your challenge..."
+                  placeholder="Cuéntame sobre tu desafío..."
                 />
               </div>
 
@@ -133,10 +152,10 @@ const Contact = () => {
                 className="btn-accent w-full flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
-                  "Sending..."
+                  "Enviando..."
                 ) : (
                   <>
-                    Start the conversation
+                    Iniciar conversación
                     <Send className="w-4 h-4" />
                   </>
                 )}

@@ -5,32 +5,32 @@ import { Target, Heart, Cpu } from "lucide-react";
 const pillars = [
   {
     icon: Target,
-    title: "Strategic Recruiting",
-    description: "Talent acquisition aligned with business goals",
+    title: "Reclutamiento Estratégico",
+    description: "Atracción de talento alineada con objetivos de negocio",
     points: [
-      "Leadership & key roles hiring",
-      "Quality-focused, data-informed decisions",
-      "Employer value proposition design",
+      "Selección de posiciones clave y liderazgo",
+      "Hunting y reclutamiento especializado",
+      "Reducción del Time-to-Hire en un 15%",
     ],
   },
   {
     icon: Heart,
-    title: "HR & Talent Consulting",
-    description: "Building organizations that perform and retain",
+    title: "HR Business Partnering",
+    description: "Construyendo organizaciones que performan y retienen",
     points: [
-      "HR Business Partnering",
-      "Talent development & succession",
-      "Culture, engagement & performance",
+      "Gestión del ciclo de desempeño",
+      "Planes de carrera y sucesión",
+      "Cultura, engagement y clima laboral",
     ],
   },
   {
     icon: Cpu,
-    title: "Digital & AI for People",
-    description: "Technology that amplifies human potential",
+    title: "Digital & IA para Personas",
+    description: "Tecnología que amplifica el potencial humano",
     points: [
-      "AI applied to recruiting & HR processes",
-      "Digital tools for efficiency & decisions",
-      "Modern employer branding & communication",
+      "IA aplicada a procesos de RRHH",
+      "Plataformas E-learning y formación digital",
+      "Marketing digital y employer branding",
     ],
   },
 ];
@@ -53,8 +53,8 @@ const Expertise = () => {
             Expertise
           </span>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground max-w-3xl mx-auto">
-            What I help organizations{" "}
-            <span className="text-accent">do better</span>
+            Lo que ayudo a las organizaciones a{" "}
+            <span className="text-accent">hacer mejor</span>
           </h2>
         </motion.div>
 

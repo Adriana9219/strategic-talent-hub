@@ -4,22 +4,22 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Marcos brought a strategic perspective to our hiring that we desperately needed. He didn't just fill roles — he helped us rethink how we build teams.",
-    author: "Sarah Chen",
-    role: "CEO, TechVentures Inc.",
-    type: "Leader",
+    quote: "Adriana aportó una perspectiva estratégica a nuestros procesos de selección que necesitábamos urgentemente. No solo cubrió posiciones — nos ayudó a repensar cómo construimos equipos.",
+    author: "Director General",
+    role: "Empresa Multinacional, Ecuador",
+    type: "Liderazgo",
   },
   {
-    quote: "His understanding of both the human and technical sides of recruiting is rare. The AI tools he implemented saved us hundreds of hours while improving candidate quality.",
-    author: "Michael Torres",
-    role: "VP of Engineering, DataFlow",
-    type: "Hiring Manager",
+    quote: "Su capacidad para combinar el lado humano con datos y métricas es excepcional. Los programas de engagement que implementó mejoraron significativamente nuestro clima laboral.",
+    author: "Gerente de Operaciones",
+    role: "Sector Retail",
+    type: "Cultura",
   },
   {
-    quote: "Working with Marcos transformed our HR function. His consulting approach is practical, data-driven, and always focused on real business impact.",
-    author: "Elena Rodriguez",
-    role: "CHRO, Global Manufacturing Co.",
-    type: "HR Leader",
+    quote: "Trabajar con Adriana transformó nuestra función de RRHH. Su enfoque de consultoría es práctico, orientado a resultados y siempre enfocado en el impacto real del negocio.",
+    author: "Directora de RRHH",
+    role: "Empresa de Servicios",
+    type: "Consultoría",
   },
 ];
 
@@ -38,10 +38,10 @@ const Testimonials = () => {
           className="text-center mb-16"
         >
           <span className="text-accent font-medium text-sm tracking-widest uppercase mb-4 block">
-            Testimonials
+            Testimonios
           </span>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground max-w-3xl mx-auto">
-            Trusted by <span className="text-accent">leaders</span>
+            Confianza de <span className="text-accent">líderes</span>
           </h2>
         </motion.div>
 

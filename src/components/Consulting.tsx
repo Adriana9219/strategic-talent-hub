@@ -5,18 +5,18 @@ import { Building2, LineChart, Lightbulb } from "lucide-react";
 const pillars = [
   {
     icon: Building2,
-    title: "Business First",
-    description: "Talent serves strategy, not the other way around. Every recommendation starts with understanding your business goals.",
+    title: "Negocio Primero",
+    description: "El talento sirve a la estrategia, no al revés. Cada recomendación comienza entendiendo los objetivos de negocio.",
   },
   {
     icon: LineChart,
-    title: "Human + Data",
-    description: "Insight backed by evidence. Combining deep human understanding with data-driven decision making.",
+    title: "Humano + Data",
+    description: "Insight respaldado por evidencia. Combinando profundo entendimiento humano con toma de decisiones basada en datos.",
   },
   {
     icon: Lightbulb,
-    title: "Practical Innovation",
-    description: "AI that actually works. No buzzwords — just tools and approaches that deliver measurable value.",
+    title: "Innovación Práctica",
+    description: "IA que realmente funciona. Sin buzzwords — solo herramientas y enfoques que entregan valor medible.",
   },
 ];
 
@@ -35,10 +35,10 @@ const Consulting = () => {
           className="text-center mb-16"
         >
           <span className="text-accent font-medium text-sm tracking-widest uppercase mb-4 block">
-            Approach
+            Enfoque
           </span>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-hero-foreground max-w-3xl mx-auto">
-            How I <span className="text-accent">work</span>
+            Cómo <span className="text-accent">trabajo</span>
           </h2>
         </motion.div>
 

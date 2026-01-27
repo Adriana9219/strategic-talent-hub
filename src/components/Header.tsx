@@ -3,12 +3,12 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
+  { name: "Inicio", href: "#home" },
+  { name: "Sobre mí", href: "#about" },
   { name: "Expertise", href: "#expertise" },
-  { name: "Work & Impact", href: "#work" },
-  { name: "Consulting", href: "#consulting" },
-  { name: "Contact", href: "#contact" },
+  { name: "Trayectoria", href: "#work" },
+  { name: "Consultoría", href: "#consulting" },
+  { name: "Contacto", href: "#contact" },
 ];
 
 const Header = () => {
@@ -35,7 +35,7 @@ const Header = () => {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#home" className="font-heading font-bold text-2xl text-hero-foreground">
-            <span className="text-accent">M</span>arcos Talent
+            <span className="text-accent">A</span>driana Chávez
           </a>
 
           {/* Desktop Navigation */}
@@ -57,7 +57,7 @@ const Header = () => {
               href="#contact"
               className="btn-accent text-sm"
             >
-              Let's work together
+              Trabajemos juntos
             </a>
           </div>
 
@@ -97,7 +97,7 @@ const Header = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="btn-accent text-center mt-4"
               >
-                Let's work together
+                Trabajemos juntos
               </a>
             </div>
           </motion.div>

@@ -21,21 +21,21 @@ const Hero = () => {
               className="mb-6"
             >
               <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium tracking-wide">
-                Strategic Recruiter & Consultant
+                HR Business Partner & Consultora
               </span>
             </motion.div>
 
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-hero-foreground leading-[1.1] mb-6">
-              Talent, Strategy & Technology —{" "}
-              <span className="text-accent">aligned for real business impact.</span>
+              Talento, Estrategia & Tecnología —{" "}
+              <span className="text-accent">alineados para impacto real.</span>
             </h1>
 
             <p className="text-hero-foreground/70 text-lg md:text-xl mb-4 max-w-xl">
-              Strategic Recruiter | HR Consultant | Digital & AI Enthusiast
+              Consultora de RRHH | Especialista en Talento | Digital & IA
             </p>
 
             <p className="text-hero-foreground/60 text-base md:text-lg mb-10 max-w-xl">
-              Helping companies hire smarter, build better teams, and evolve faster
+              Ayudo a las empresas a contratar mejor, desarrollar equipos de alto rendimiento y evolucionar más rápido
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -45,7 +45,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.98 }}
                 className="btn-accent inline-flex items-center justify-center gap-2"
               >
-                View my work
+                Ver mi trayectoria
                 <ArrowRight size={18} />
               </motion.a>
               <motion.a
@@ -55,7 +55,7 @@ const Hero = () => {
                 className="btn-outline-hero inline-flex items-center justify-center gap-2"
               >
                 <MessageCircle size={18} />
-                Let's talk
+                Hablemos
               </motion.a>
             </div>
           </motion.div>
@@ -74,8 +74,8 @@ const Hero = () => {
               
               <img
                 src={profileImage}
-                alt="Marcos - Strategic Recruiter & Consultant"
-                className="relative w-72 md:w-80 lg:w-96 aspect-[4/5] object-cover rounded-2xl shadow-2xl"
+                alt="Adriana Chávez - HR Business Partner & Consultora"
+                className="relative w-72 md:w-80 lg:w-96 aspect-[4/5] object-cover object-top rounded-2xl shadow-2xl"
               />
               
               {/* Floating badge */}
@@ -85,8 +85,8 @@ const Hero = () => {
                 transition={{ delay: 0.8, duration: 0.5 }}
                 className="absolute -bottom-6 -left-6 bg-charcoal border border-hero-foreground/10 px-4 py-3 rounded-xl shadow-lg"
               >
-                <p className="text-accent font-heading font-bold text-2xl">7+</p>
-                <p className="text-hero-foreground/70 text-sm">Years Experience</p>
+                <p className="text-accent font-heading font-bold text-2xl">+7</p>
+                <p className="text-hero-foreground/70 text-sm">Años de Experiencia</p>
               </motion.div>
             </div>
           </motion.div>

@@ -1,10 +1,10 @@
 import { Linkedin, Mail, ArrowUp } from "lucide-react";
 
 const quickLinks = [
-  { name: "About", href: "#about" },
+  { name: "Sobre mí", href: "#about" },
   { name: "Expertise", href: "#expertise" },
-  { name: "Work", href: "#work" },
-  { name: "Contact", href: "#contact" },
+  { name: "Trayectoria", href: "#work" },
+  { name: "Contacto", href: "#contact" },
 ];
 
 const Footer = () => {
@@ -19,18 +19,18 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <a href="#home" className="font-heading font-bold text-2xl text-hero-foreground inline-block mb-4">
-              <span className="text-accent">M</span>arcos Talent
+              <span className="text-accent">A</span>driana Chávez
             </a>
             <p className="text-hero-foreground/60 text-sm leading-relaxed max-w-xs">
-              Strategic Recruiter & Consultant helping organizations hire smarter, 
-              build better teams, and evolve faster.
+              HR Business Partner & Consultora ayudando a las organizaciones a contratar 
+              mejor, desarrollar equipos de alto rendimiento y evolucionar más rápido.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="font-heading font-bold text-hero-foreground mb-4">
-              Quick Links
+              Enlaces Rápidos
             </h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
@@ -49,17 +49,17 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h4 className="font-heading font-bold text-hero-foreground mb-4">
-              Get in Touch
+              Contacto
             </h4>
             <a
-              href="mailto:hello@marcostalent.com"
+              href="mailto:adrianathalie.92@gmail.com"
               className="text-hero-foreground/60 hover:text-accent transition-colors text-sm block mb-4"
             >
-              hello@marcostalent.com
+              adrianathalie.92@gmail.com
             </a>
             <div className="flex items-center gap-3">
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/adrianachavez"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-hero-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors group"
@@ -67,7 +67,7 @@ const Footer = () => {
                 <Linkedin className="w-4 h-4 text-hero-foreground group-hover:text-accent-foreground" />
               </a>
               <a
-                href="mailto:hello@marcostalent.com"
+                href="mailto:adrianathalie.92@gmail.com"
                 className="w-10 h-10 bg-hero-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors group"
               >
                 <Mail className="w-4 h-4 text-hero-foreground group-hover:text-accent-foreground" />
@@ -79,7 +79,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 gap-4">
           <p className="text-hero-foreground/40 text-sm">
-            © {new Date().getFullYear()} Marcos Talent. All rights reserved.
+            © {new Date().getFullYear()} Adriana Chávez. Todos los derechos reservados.
           </p>
           
           <button
