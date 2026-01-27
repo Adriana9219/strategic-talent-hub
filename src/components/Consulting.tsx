@@ -1,0 +1,74 @@
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import { Building2, LineChart, Lightbulb } from "lucide-react";
+
+const pillars = [
+  {
+    icon: Building2,
+    title: "Business First",
+    description: "Talent serves strategy, not the other way around. Every recommendation starts with understanding your business goals.",
+  },
+  {
+    icon: LineChart,
+    title: "Human + Data",
+    description: "Insight backed by evidence. Combining deep human understanding with data-driven decision making.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Practical Innovation",
+    description: "AI that actually works. No buzzwords — just tools and approaches that deliver measurable value.",
+  },
+];
+
+const Consulting = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <section id="consulting" className="hero-gradient py-24 lg:py-32">
+      <div className="section-container" ref={ref}>
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <span className="text-accent font-medium text-sm tracking-widest uppercase mb-4 block">
+            Approach
+          </span>
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-hero-foreground max-w-3xl mx-auto">
+            How I <span className="text-accent">work</span>
+          </h2>
+        </motion.div>
+
+        {/* Pillars */}
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+          {pillars.map((pillar, index) => (
+            <motion.div
+              key={pillar.title}
+              initial={{ opacity: 0, y: 40 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <pillar.icon className="w-8 h-8 text-accent" />
+              </div>
+
+              <h3 className="font-heading text-xl font-bold text-hero-foreground mb-4">
+                {pillar.title}
+              </h3>
+
+              <p className="text-hero-foreground/70 leading-relaxed">
+                {pillar.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Consulting;
