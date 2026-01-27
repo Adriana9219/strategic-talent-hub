@@ -6,23 +6,23 @@ import { Briefcase, Globe, Users, Zap } from "lucide-react";
 const highlights = [
   {
     icon: Briefcase,
-    value: "7+",
-    label: "Years in Talent & HR",
+    value: "+7",
+    label: "Años en Talento & RRHH",
   },
   {
     icon: Globe,
     value: "Regional",
-    label: "& Strategic Roles",
+    label: "Roles Estratégicos",
   },
   {
     icon: Users,
-    value: "Leadership",
-    label: "& Critical Hiring",
+    value: "Liderazgo",
+    label: "& Posiciones Clave",
   },
   {
     icon: Zap,
     value: "Digital",
-    label: "Transformation & AI",
+    label: "Marketing & IA",
   },
 ];
 
@@ -42,25 +42,26 @@ const About = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="text-accent font-medium text-sm tracking-widest uppercase mb-4 block">
-              About Me
+              Sobre Mí
             </span>
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Strategic mindset.{" "}
-              <span className="text-accent">Human insight.</span>
+              Visión estratégica.{" "}
+              <span className="text-accent">Enfoque humano.</span>
             </h2>
             
             <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
               <p>
-                With over 7 years navigating the intersection of talent, business, and technology, 
-                I've evolved from traditional HR into a strategic partner for organizations navigating complexity.
+                Business Partner con más de 7 años de experiencia liderando la gestión integral del talento 
+                y los procesos de Recursos Humanos a nivel regional, en empresas de España y Ecuador.
               </p>
               <p>
-                My journey spans talent acquisition, HR business partnering, and consulting — always 
-                with a lens on how digital transformation and AI can amplify human potential, not replace it.
+                Mi enfoque está en el HR Business Partnering estratégico, la detección y atracción de 
+                talento especializado (comercial y corporativo), y la implementación de planes de 
+                desarrollo que impactan directamente en el negocio.
               </p>
               <p>
-                I believe the best recruiting isn't about filling seats. It's about understanding 
-                where a business is going and finding the people who can take it there.
+                Actualmente cursando un Máster en Marketing Digital e IA Generativa, combino mi experiencia 
+                en RRHH con las últimas herramientas tecnológicas para transformar la gestión del talento.
               </p>
             </div>
           </motion.div>

@@ -1,31 +1,55 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, MapPin, Calendar } from "lucide-react";
 
-const cases = [
+const experiences = [
   {
-    challenge: "Tech startup scaling from 20 to 100 employees",
-    strategy: "Built talent acquisition framework from scratch, implemented AI-powered sourcing",
-    result: "85% offer acceptance rate, 40% faster time-to-hire",
-    tags: ["Recruiting", "AI", "Strategy"],
+    role: "Jefe Regional de Talento Humano",
+    company: "MARICIMEX",
+    location: "Ecuador",
+    period: "Nov 2021 - Jun 2024",
+    achievements: [
+      "Reducción del 15% en Time-to-Hire para posiciones estratégicas",
+      "Aumento del 20% en índices de Engagement regional",
+      "98% de cumplimiento en programas de capacitación",
+    ],
+    tags: ["Liderazgo Regional", "Talento", "Cultura"],
   },
   {
-    challenge: "Manufacturing company with 35% annual turnover",
-    strategy: "Diagnosed culture gaps, redesigned onboarding, implemented engagement programs",
-    result: "Reduced turnover to 18% within 12 months",
-    tags: ["HR", "Consulting", "Culture"],
+    role: "Analista de Capacitación",
+    company: "HANDYTEC ACADEMY",
+    location: "Ecuador",
+    period: "Nov 2020 - Oct 2021",
+    achievements: [
+      "Implementación estratégica de programas educativos",
+      "Gestión global de capacitaciones y plataformas",
+      "Reclutamiento de instructores internacionales",
+    ],
+    tags: ["Formación", "E-learning", "Operaciones"],
   },
   {
-    challenge: "Regional bank digital transformation",
-    strategy: "Identified digital talent gaps, recruited key tech leaders, upskilled existing teams",
-    result: "Launched mobile banking platform with hybrid team",
-    tags: ["Digital", "Leadership", "Recruiting"],
+    role: "Técnico de Recursos Humanos",
+    company: "GRUPOGESTIONEX / IBERDROLA",
+    location: "Barcelona, España",
+    period: "Feb 2018 - Feb 2019",
+    achievements: [
+      "Liderazgo en reclutamiento de perfiles comerciales",
+      "Selección masiva y técnicas de Hunting",
+      "Ampliación significativa de la base de talento",
+    ],
+    tags: ["Reclutamiento", "Hunting", "Selección Masiva"],
   },
   {
-    challenge: "E-commerce company AI integration",
-    strategy: "Implemented AI tools for candidate screening, automated initial assessments",
-    result: "60% reduction in screening time, improved candidate quality",
-    tags: ["AI", "Process", "Efficiency"],
+    role: "Consultora Técnico de Formación",
+    company: "GRUPO NORTE",
+    location: "España",
+    period: "Jun 2017 - Ene 2018",
+    achievements: [
+      "Diseño de propuestas formativas a medida",
+      "Optimización de plataformas E-learning",
+      "Selección especializada de formadores",
+    ],
+    tags: ["Consultoría", "Formación", "Digital"],
   },
 ];
 
@@ -44,26 +68,26 @@ const Work = () => {
           className="text-center mb-16"
         >
           <span className="text-accent font-medium text-sm tracking-widest uppercase mb-4 block">
-            Work & Impact
+            Trayectoria & Impacto
           </span>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground max-w-3xl mx-auto">
-            Real challenges.{" "}
-            <span className="text-accent">Measurable results.</span>
+            Experiencia real.{" "}
+            <span className="text-accent">Resultados medibles.</span>
           </h2>
         </motion.div>
 
-        {/* Cases Grid */}
+        {/* Experience Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {cases.map((caseItem, index) => (
+          {experiences.map((exp, index) => (
             <motion.div
-              key={caseItem.challenge}
+              key={exp.role + exp.company}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
               className="bg-card p-8 rounded-2xl border border-border hover:border-accent/30 hover:shadow-lg transition-all duration-300 group"
             >
               <div className="flex flex-wrap gap-2 mb-4">
-                {caseItem.tags.map((tag) => (
+                {exp.tags.map((tag) => (
                   <span
                     key={tag}
                     className="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full"
@@ -73,19 +97,31 @@ const Work = () => {
                 ))}
               </div>
 
-              <h3 className="font-heading text-lg font-bold text-foreground mb-3">
-                {caseItem.challenge}
+              <h3 className="font-heading text-xl font-bold text-foreground mb-2">
+                {exp.role}
               </h3>
+              
+              <p className="text-accent font-semibold mb-3">{exp.company}</p>
 
-              <p className="text-muted-foreground text-sm mb-4">
-                <span className="font-medium text-foreground/80">Strategy: </span>
-                {caseItem.strategy}
-              </p>
-
-              <div className="flex items-center gap-2 text-accent font-semibold">
-                <ArrowUpRight className="w-4 h-4" />
-                <span className="text-sm">{caseItem.result}</span>
+              <div className="flex flex-wrap gap-4 text-muted-foreground text-sm mb-4">
+                <span className="flex items-center gap-1">
+                  <MapPin className="w-4 h-4" />
+                  {exp.location}
+                </span>
+                <span className="flex items-center gap-1">
+                  <Calendar className="w-4 h-4" />
+                  {exp.period}
+                </span>
               </div>
+
+              <ul className="space-y-2">
+                {exp.achievements.map((achievement) => (
+                  <li key={achievement} className="flex items-start gap-2 text-sm text-foreground/80">
+                    <ArrowUpRight className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                    {achievement}
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </div>
@@ -101,7 +137,7 @@ const Work = () => {
             href="#contact"
             className="btn-primary inline-flex items-center gap-2"
           >
-            Let's create similar results
+            Creemos resultados similares
             <ArrowUpRight className="w-4 h-4" />
           </a>
         </motion.div>
