@@ -7,7 +7,6 @@ const navLinks = [
   { name: "Sobre mí", href: "#about" },
   { name: "Expertise", href: "#expertise" },
   { name: "Trayectoria", href: "#work" },
-  { name: "Consultoría", href: "#consulting" },
   { name: "Contacto", href: "#contact" },
 ];
 

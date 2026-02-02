@@ -1,36 +1,54 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Target, Heart, Cpu } from "lucide-react";
+import { Target, Heart, Cpu, TrendingUp } from "lucide-react";
 
 const pillars = [
   {
     icon: Target,
+    number: "01",
     title: "Reclutamiento Estratégico",
+    tagline: "Talento que transforma",
     description: "Atracción de talento alineada con objetivos de negocio",
     points: [
-      "Selección de posiciones clave y liderazgo",
-      "Hunting y reclutamiento especializado",
-      "Reducción del Time-to-Hire en un 15%",
+      "Selección de Ejecutivos y Liderazgo",
+      "Hunting y Sourcing Especializado",
+      "Optimización del Time-to-Hire",
     ],
   },
   {
     icon: Heart,
+    number: "02",
     title: "HR Business Partnering",
+    tagline: "Cultura que convierte",
     description: "Construyendo organizaciones que performan y retienen",
     points: [
-      "Gestión del ciclo de desempeño",
-      "Planes de carrera y sucesión",
-      "Cultura, engagement y clima laboral",
+      "Sistemas de Gestión del Desempeño",
+      "Planes de Sucesión y Desarrollo",
+      "Engagement y Retención de Talento",
     ],
   },
   {
     icon: Cpu,
-    title: "Digital & IA para Personas",
+    number: "03",
+    title: "Digital e IA para Personas",
+    tagline: "Tecnología que escala",
     description: "Tecnología que amplifica el potencial humano",
     points: [
-      "IA aplicada a procesos de RRHH",
-      "Plataformas E-learning y formación digital",
-      "Marketing digital y employer branding",
+      "IA en Reclutamiento y Selección",
+      "Plataformas de Aprendizaje Digital",
+      "Employer Branding Digital",
+    ],
+  },
+  {
+    icon: TrendingUp,
+    number: "04",
+    title: "Consultoría Estratégica",
+    tagline: "Estrategia que permanece",
+    description: "Consultoría estratégica en transformación de personas",
+    points: [
+      "Diseño Organizacional",
+      "Gestión del Cambio",
+      "People Analytics e Insights",
     ],
   },
 ];
@@ -40,57 +58,125 @@ const Expertise = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="expertise" className="bg-section-alt py-24 lg:py-32">
+    <section id="expertise" className="bg-background py-32 lg:py-48">
       <div className="section-container" ref={ref}>
-        {/* Header */}
+        {/* Header - BOLD */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.8 }}
+          className="mb-24"
         >
-          <span className="text-accent font-medium text-sm tracking-widest uppercase mb-4 block">
-            Expertise
-          </span>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground max-w-3xl mx-auto">
-            Lo que ayudo a las organizaciones a{" "}
-            <span className="text-accent">hacer mejor</span>
+          <p className="text-accent font-black text-lg tracking-widest uppercase mb-4 block">
+            EXPERTISE PRINCIPAL
+          </p>
+          <h2 className="font-heading text-6xl md:text-7xl lg:text-8xl font-black text-foreground leading-[1.1] mb-6">
+            Lo que entrego
           </h2>
+          <p className="text-foreground/70 text-xl max-w-2xl mx-auto font-medium">
+            Soluciones estratégicas en reclutamiento, gestión del talento y transformación organizacional.
+          </p>
+          <div className="w-24 h-2 bg-accent mt-8" />
         </motion.div>
 
         {/* Pillars Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
           {pillars.map((pillar, index) => (
             <motion.div
               key={pillar.title}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
-              className="bg-card p-8 rounded-2xl border border-border hover:border-accent/30 hover:shadow-lg transition-all duration-300 group"
+              transition={{ duration: 0.7, delay: index * 0.12 }}
+              className="group relative overflow-hidden"
             >
-              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent transition-colors duration-300">
-                <pillar.icon className="w-7 h-7 text-primary-foreground" />
+              {/* Card Background - Black with hover effect */}
+              <div className="relative bg-primary rounded-2xl p-10 h-full hover:bg-primary/90 transition-all duration-300 border-2 border-accent/30 hover:border-accent">
+                {/* Number Badge */}
+                <div className="absolute top-6 right-6 text-accent/30 font-black text-8xl group-hover:text-accent/50 transition-colors">
+                  {pillar.number}
+                </div>
+
+                {/* Icon */}
+                <div className="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <pillar.icon className="w-8 h-8 text-primary font-black" />
+                </div>
+
+                {/* Content */}
+                <p className="text-accent font-black text-sm tracking-widest uppercase mb-3">
+                  {pillar.tagline}
+                </p>
+
+                <h3 className="font-heading text-3xl font-black text-primary-foreground mb-3 leading-tight">
+                  {pillar.title}
+                </h3>
+
+                <p className="text-primary-foreground/80 text-base leading-relaxed mb-8">
+                  {pillar.description}
+                </p>
+
+                {/* Points List */}
+                <ul className="space-y-4">
+                  {pillar.points.map((point) => (
+                    <li
+                      key={point}
+                      className="flex items-start gap-3 text-primary-foreground/90 text-sm font-medium"
+                    >
+                      <div className="w-2 h-2 bg-accent rounded-full mt-2 shrink-0" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Bottom Arrow */}
+                <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <motion.div
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  >
+                    <svg
+                      className="w-6 h-6 text-accent"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={3}
+                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                      />
+                    </svg>
+                  </motion.div>
+                </div>
               </div>
-
-              <h3 className="font-heading text-xl font-bold text-foreground mb-3">
-                {pillar.title}
-              </h3>
-
-              <p className="text-muted-foreground mb-6">
-                {pillar.description}
-              </p>
-
-              <ul className="space-y-3">
-                {pillar.points.map((point) => (
-                  <li key={point} className="flex items-start gap-3 text-sm text-foreground/80">
-                    <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0" />
-                    {point}
-                  </li>
-                ))}
-              </ul>
             </motion.div>
           ))}
         </div>
+
+        {/* Bottom Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.6 }}
+          className="grid md:grid-cols-4 gap-6 mt-24 pt-16 border-t-4 border-accent"
+        >
+          <div className="text-center">
+            <p className="text-accent font-black text-4xl md:text-5xl mb-2">+7</p>
+            <p className="text-foreground/70 font-semibold">Años de Impacto</p>
+          </div>
+          <div className="text-center">
+            <p className="text-accent font-black text-4xl md:text-5xl mb-2">2</p>
+            <p className="text-foreground/70 font-semibold">Países</p>
+          </div>
+          <div className="text-center">
+            <p className="text-accent font-black text-4xl md:text-5xl mb-2">+20</p>
+            <p className="text-foreground/70 font-semibold">Líderes Desarrollados</p>
+          </div>
+          <div className="text-center">
+            <p className="text-accent font-black text-4xl md:text-5xl mb-2">20%</p>
+            <p className="text-foreground/70 font-semibold">Aumento Índice Engagement</p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

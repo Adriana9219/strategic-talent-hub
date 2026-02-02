@@ -6,94 +6,94 @@
 
 @layer base {
   :root {
-    /* Deep green/charcoal primary palette */
-    --background: 60 10% 96%;
-    --foreground: 160 25% 12%;
+    /* Black and yellow primary palette */
+    --background: 48 100% 95%;
+    --foreground: 0 0% 10%;
 
-    --card: 60 10% 98%;
-    --card-foreground: 160 25% 12%;
+    --card: 48 100% 97%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 60 10% 98%;
-    --popover-foreground: 160 25% 12%;
+    --popover: 48 100% 97%;
+    --popover-foreground: 0 0% 10%;
 
-    /* Deep forest green - primary brand color */
-    --primary: 160 30% 15%;
-    --primary-foreground: 45 30% 96%;
+    /* Deep black - primary brand color */
+    --primary: 0 0% 10%;
+    --primary-foreground: 48 100% 95%;
 
     /* Warm neutral secondary */
-    --secondary: 45 15% 92%;
-    --secondary-foreground: 160 25% 15%;
+    --secondary: 48 100% 90%;
+    --secondary-foreground: 0 0% 12%;
 
-    --muted: 45 10% 90%;
-    --muted-foreground: 160 10% 45%;
+    --muted: 48 100% 88%;
+    --muted-foreground: 0 0% 50%;
 
-    /* Soft gold accent */
-    --accent: 42 65% 55%;
-    --accent-foreground: 160 30% 12%;
+    /* Bright yellow accent */
+    --accent: 48 100% 50%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 45 15% 88%;
-    --input: 45 15% 88%;
-    --ring: 160 30% 25%;
+    --border: 48 100% 88%;
+    --input: 48 100% 88%;
+    --ring: 0 0% 20%;
 
     --radius: 0.625rem;
 
     /* Custom brand tokens */
-    --hero-bg: 160 28% 10%;
-    --hero-foreground: 45 25% 95%;
-    --gold: 42 65% 55%;
-    --gold-muted: 42 40% 75%;
-    --charcoal: 160 20% 18%;
-    --warm-white: 45 30% 97%;
-    --section-alt: 45 12% 94%;
+    --hero-bg: 0 0% 8%;
+    --hero-foreground: 48 100% 95%;
+    --gold: 48 100% 50%;
+    --gold-muted: 48 100% 70%;
+    --charcoal: 0 0% 15%;
+    --warm-white: 48 100% 97%;
+    --section-alt: 48 100% 92%;
 
     /* Shadows */
-    --shadow-sm: 0 2px 8px -2px hsl(160 30% 15% / 0.08);
-    --shadow-md: 0 8px 24px -8px hsl(160 30% 15% / 0.12);
-    --shadow-lg: 0 16px 48px -12px hsl(160 30% 15% / 0.15);
-    --shadow-gold: 0 8px 32px -8px hsl(42 65% 55% / 0.3);
+    --shadow-sm: 0 2px 8px -2px hsl(0 0% 10% / 0.08);
+    --shadow-md: 0 8px 24px -8px hsl(0 0% 10% / 0.12);
+    --shadow-lg: 0 16px 48px -12px hsl(0 0% 10% / 0.15);
+    --shadow-gold: 0 8px 32px -8px hsl(48 100% 50% / 0.4);
 
     /* Sidebar tokens */
-    --sidebar-background: 160 28% 10%;
-    --sidebar-foreground: 45 25% 95%;
-    --sidebar-primary: 42 65% 55%;
-    --sidebar-primary-foreground: 160 30% 12%;
-    --sidebar-accent: 160 25% 18%;
-    --sidebar-accent-foreground: 45 25% 95%;
-    --sidebar-border: 160 20% 20%;
-    --sidebar-ring: 42 65% 55%;
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 48 100% 95%;
+    --sidebar-primary: 48 100% 50%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 48 100% 95%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 48 100% 50%;
   }
 
   .dark {
-    --background: 160 28% 8%;
-    --foreground: 45 25% 95%;
+    --background: 0 0% 6%;
+    --foreground: 48 100% 95%;
 
-    --card: 160 25% 12%;
-    --card-foreground: 45 25% 95%;
+    --card: 0 0% 12%;
+    --card-foreground: 48 100% 95%;
 
-    --popover: 160 25% 12%;
-    --popover-foreground: 45 25% 95%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 48 100% 95%;
 
-    --primary: 45 25% 95%;
-    --primary-foreground: 160 30% 12%;
+    --primary: 48 100% 95%;
+    --primary-foreground: 0 0% 10%;
 
-    --secondary: 160 20% 18%;
-    --secondary-foreground: 45 25% 95%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 48 100% 95%;
 
-    --muted: 160 15% 20%;
-    --muted-foreground: 45 15% 65%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 48 100% 65%;
 
-    --accent: 42 65% 55%;
-    --accent-foreground: 160 30% 12%;
+    --accent: 48 100% 50%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 160 20% 20%;
-    --input: 160 20% 20%;
-    --ring: 42 65% 55%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 48 100% 50%;
   }
 }
 
@@ -126,6 +126,7 @@
 
   .hero-gradient {
     @apply bg-gradient-to-br from-hero-bg via-charcoal to-hero-bg;
+    background: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 0% 10%) 50%, hsl(0 0% 8%) 100%);
   }
 
   .card-elevated {
@@ -190,5 +191,15 @@
       opacity: 1;
       transform: scale(1);
     }
+  }
+
+  /* Profile image styling with grayscale effect */
+  .profile-image {
+    @apply grayscale transition-all duration-300;
+  }
+
+  .profile-image:hover {
+    @apply grayscale-0 scale-105;
+    filter: grayscale(0%);
   }
 }
