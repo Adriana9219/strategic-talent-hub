@@ -28,7 +28,8 @@ const experiences = [
     period: "Nov 2020 - Oct 2021",
     metrics: [
       { number: "+50", label: "Programas de Data Science y Big Data implementados" },
-      { number: "+500", label: "Personas capacitadas" },
+      { number: "+500", label: "Usuarios" },
+      { number: "+500", label: "Usuarios gestionados" },
     ],
     functions: [
       "Diseño e implementación de programas educativos corporativos",
@@ -43,7 +44,7 @@ const experiences = [
     location: "Barcelona, España",
     period: "Feb 2018 - Feb 2019",
     metrics: [
-      { number: "+200", label: "Perfiles comerciales reclutados" },
+      { number: "+2000", label: "Perfiles comerciales reclutados" },
       { number: "40%", label: "Reducción en tiempo de contratación" },
     ],
     functions: [
@@ -60,7 +61,7 @@ const experiences = [
     period: "Jun 2017 - Ene 2018",
     metrics: [
       { number: "+10", label: "Propuestas formativas diseñadas" },
-      { number: "+20", label: "Perfiles de formadores reclutados" },
+      { number: "+200", label: "Perfiles de formadores reclutados" },
     ],
     functions: [
       "Diseño de propuestas formativas a medida",
